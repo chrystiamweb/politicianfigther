@@ -1,33 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Politicians</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Api</th>
-      <th>Name</th>
-      <th>Party</th>
-      <th>State</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @politicians.each do |politician| %>
-      <tr>
-        <td><%= politician.api_id %></td>
-        <td><%= politician.name %></td>
-        <td><%= politician.party %></td>
-        <td><%= politician.state %></td>
-        <td><%= link_to 'Show', politician %></td>
-        <td><%= link_to 'Edit', edit_politician_path(politician) %></td>
-        <td><%= link_to 'Destroy', politician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Politician', new_politician_path %>
+<div class="player_one">
+  <p>Vote For: <%= link_to @player_one.name ,'#' ,:onclick => "#{run_game(@player_one, @player_two)}"%>
+</div>
