@@ -1,3 +1,4 @@
 <div class="player_one">
-  <p>Vote For: <%= link_to @player_one.name ,'#' ,:onclick => "#{run_game(@player_one, @player_two)}"%>
+  <p>Vote For: <%= link_to @player_one.name ,'#' ,:onclick => "#{run_game(@player_one, @player_two)}" %></p>
+  <p>Vote For: <%= link_to @player_two.name ,'#' ,:onclick => "#{run_game(@player_two, @player_one)}" %></p>
 </div>

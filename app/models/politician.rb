@@ -3,7 +3,7 @@ class Politician < ApplicationRecord
 
   def update_rating(rating)
     self.rating.rating = rating.rating
-    puts rating.rating    
+    self.rating.games_played = rating.games_played
     self.rating.save!
   end
 end
